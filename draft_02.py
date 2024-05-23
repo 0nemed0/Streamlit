@@ -1,12 +1,11 @@
-import cv2
-import streamlit as st
 from ultralytics import YOLO
 
-def app():
-    st.header('Object Detection Web App')
-    st.subheader('Powered by YOLOv8')
-    st.write('Welcome!')
-    model = YOLO('yolov8n.pt')
+# Load a model
+model = YOLO("yolov8n.yaml")  # build a new model from scratch
+model = YOLO("yolov8n.pt")  # load a pretrained model (recommended for training)
 
-if __name__ == "__main__":
-    app()
+# Use the model
+results = model.train(data="coco128.yaml", epochs=3)  # train the model
+results = model.val()  # evaluate model performance on the validation set
+results = model("https://ultralytics.com/images/bus.jpg")  # predict on an image
+success = YOLO("yolov8n.pt").export(format="onnx")  # export a model to ONNX format
