@@ -1,8 +1,8 @@
 streamlit
 opencv-python-headless
 numpy
-#psutil
-#torch
-#matplotlib
-#pyyaml
-#tqdm
+psutil
+torch
+matplotlib
+pyyaml
+tqdm
