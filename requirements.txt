@@ -1,4 +1,3 @@
 opencv-python
 ultralytics
-numpy
-tempfile
+streamlit
