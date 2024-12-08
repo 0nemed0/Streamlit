@@ -4,3 +4,4 @@ numpy
 psutil
 torch
 matplotlib
+pyyaml
